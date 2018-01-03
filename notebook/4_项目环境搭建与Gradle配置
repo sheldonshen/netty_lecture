@@ -1,0 +1,14 @@
+4_项目环境搭建与Gradle配置
+gradle构建工具
+gradle wrapper
+
+search.maven.org maven中央仓库
+
+gradle基本命令
+gradle clean build
+推荐使用命令行
+
+Show in Explorer:idea中打开项目在本地磁盘的位置
+
+gradle的本地仓库位置
+C:\Users\sheldon\.gradle\caches\modules-2\files-2.1\io.netty

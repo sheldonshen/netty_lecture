@@ -1,0 +1,19 @@
+rmi基本工作原理
+rmi:只针对Java
+client:stub
+server:skeleton
+序列化与反序列化,也叫做编码与解码
+
+rpc基本工作原理
+很多rpc框架是跨语言的
+使用方式:
+1定义一个接口说明文件(IDL)::描述了对象[结构体],对象成员,接口方法等一系列信息.
+2通过RPC框架所提供的编译器,将接口说明文件编译成具体语言文件.
+3在客户端与服务器端分别引入RPC编译器所生成的文件,即可像调用本地方法一样调用远程方法
+
+rpc与webservice的区别
+1底层数据传输方式:rpc(基于socket),webservice(基于http)
+2底层数据传输量:rpc(少些),webservice(多些)
+
+google protobuf,grpc介绍
+google protobuf环境搭建

@@ -1,0 +1,12 @@
+WebSocketFrame的子类有6种,如下
+BinaryWebSocketFrame
+PingWebSocketFrame
+PongWebSocketFrame
+TextWebSocketFrame
+CloseWebSocketFrame
+ContinuationWebSocketFrame
+
+请求头:
+Upgrade:websocket
+
+netty心跳检测

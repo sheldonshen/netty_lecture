@@ -1,0 +1,28 @@
+6_Netty回调与Channel执行流程分析
+
+java语言的向下类型转换的啰嗦:
+if(msg instanceof HttpRequest){
+        HttpRequest httpRequest = (HttpRequest)msg;
+}
+
+curl工具的使用
+curl 'http://localhost:8899'
+curl -X POST 'http://localhost:8899'
+curl -X PUT  'http://localhost:8899'
+curl -X DELETE 'http://localhost:8899'
+
+网络编程中的概念
+inbound
+outbound
+
+Channel执行流程
+channel active
+channel registered
+handler added
+channel read0
+channel inactive
+channel unregistered
+
+linux命令
+lsof -i:8899与windows等价的命令是?
+netstat -n

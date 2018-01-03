@@ -1,0 +1,6 @@
+8_Netty多客户端连接与通信
+
+多个客户端同时连接一个服务器端.
+
+netty实现多人聊天程序,以及事件广播(服务器端)
+demo:com.shengsiyuan.netty.thirdexample

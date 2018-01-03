@@ -1,0 +1,6 @@
+netty实现多人聊天程序,以及事件广播(客户端)
+demo:com.shengsiyuan.netty.thirdexample
+
+netty心跳
+netty读写检测机制
+netty长连接

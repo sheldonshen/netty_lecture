@@ -1,0 +1,14 @@
+3_Netty课程大纲深度解读
+rpc框架
+中间文件
+客户端代码:stub
+服务器端代码:skeleton
+person.getPersonByName(String name);
+这段代码的内部运行过程:A机器调用以上代码,序列化,通过网络调用到B机器上,B机器反序列化,
+B机器将结果序列化(如果有结果的话),A机器反序列化拿到调用的结果
+
+rpc框架的数据类型:取所有它支持的语言的数据类型的交集
+rmi和rpc的区别:rmi只能用于java,rpc可支持多种语言
+
+netty对各种协议的支持:http,websocket,
+http与websocket的区别.
