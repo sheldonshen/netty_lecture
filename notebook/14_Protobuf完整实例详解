@@ -1,1 +1,3 @@
 14_Protobuf完整实例详解
+利用google buffer的protoc编译器编译proto文件
+protoc --java_out=out_dir proto_file_dir

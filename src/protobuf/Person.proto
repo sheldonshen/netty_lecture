@@ -3,10 +3,10 @@ syntax = "proto2";
 package com.shengsiyuan.protobuf;
 
 option optimize_for = SPEED;
-option java_package = "com.shengsiyuan.protobuf";
-option java_outer_classname = "DataInfo";
+option java_package = "com.shengsiyuan.netty.sixexample";
+option java_outer_classname = "MyDataInfo";
 
-message Student {
+message Person {
    required string name = 1;
    optional int32  age = 2;
    optional string address = 3;
