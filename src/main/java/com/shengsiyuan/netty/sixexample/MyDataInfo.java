@@ -7,6 +7,8 @@ public final class MyDataInfo {
   private MyDataInfo() {}
   public static void registerAllExtensions(
       com.google.protobuf.ExtensionRegistryLite registry) {
+    registry.add(com.shengsiyuan.netty.sixexample.MyDataInfo.Person.request);
+    registry.add(com.shengsiyuan.netty.sixexample.MyDataInfo.People.request);
   }
 
   public static void registerAllExtensions(
@@ -14,6 +16,635 @@ public final class MyDataInfo {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
+  public interface AbstractTypeOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:com.shengsiyuan.protobuf.AbstractType)
+      com.google.protobuf.GeneratedMessageV3.
+          ExtendableMessageOrBuilder<AbstractType> {
+
+    /**
+     * <code>required .com.shengsiyuan.protobuf.AbstractType.Type type = 1;</code>
+     */
+    boolean hasType();
+    /**
+     * <code>required .com.shengsiyuan.protobuf.AbstractType.Type type = 1;</code>
+     */
+    com.shengsiyuan.netty.sixexample.MyDataInfo.AbstractType.Type getType();
+  }
+  /**
+   * Protobuf type {@code com.shengsiyuan.protobuf.AbstractType}
+   */
+  public  static final class AbstractType extends
+      com.google.protobuf.GeneratedMessageV3.ExtendableMessage<
+        AbstractType> implements
+      // @@protoc_insertion_point(message_implements:com.shengsiyuan.protobuf.AbstractType)
+      AbstractTypeOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use AbstractType.newBuilder() to construct.
+    private AbstractType(com.google.protobuf.GeneratedMessageV3.ExtendableBuilder<com.shengsiyuan.netty.sixexample.MyDataInfo.AbstractType, ?> builder) {
+      super(builder);
+    }
+    private AbstractType() {
+      type_ = 0;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private AbstractType(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              int rawValue = input.readEnum();
+              com.shengsiyuan.netty.sixexample.MyDataInfo.AbstractType.Type value = com.shengsiyuan.netty.sixexample.MyDataInfo.AbstractType.Type.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(1, rawValue);
+              } else {
+                bitField0_ |= 0x00000001;
+                type_ = rawValue;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.shengsiyuan.netty.sixexample.MyDataInfo.internal_static_com_shengsiyuan_protobuf_AbstractType_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.shengsiyuan.netty.sixexample.MyDataInfo.internal_static_com_shengsiyuan_protobuf_AbstractType_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.shengsiyuan.netty.sixexample.MyDataInfo.AbstractType.class, com.shengsiyuan.netty.sixexample.MyDataInfo.AbstractType.Builder.class);
+    }
+
+    /**
+     * Protobuf enum {@code com.shengsiyuan.protobuf.AbstractType.Type}
+     */
+    public enum Type
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>Person = 0;</code>
+       */
+      Person(0),
+      /**
+       * <code>People = 1;</code>
+       */
+      People(1),
+      ;
+
+      /**
+       * <code>Person = 0;</code>
+       */
+      public static final int Person_VALUE = 0;
+      /**
+       * <code>People = 1;</code>
+       */
+      public static final int People_VALUE = 1;
+
+
+      public final int getNumber() {
+        return value;
+      }
+
+      /**
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static Type valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static Type forNumber(int value) {
+        switch (value) {
+          case 0: return Person;
+          case 1: return People;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<Type>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          Type> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<Type>() {
+              public Type findValueByNumber(int number) {
+                return Type.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return com.shengsiyuan.netty.sixexample.MyDataInfo.AbstractType.getDescriptor().getEnumTypes().get(0);
+      }
+
+      private static final Type[] VALUES = values();
+
+      public static Type valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private Type(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:com.shengsiyuan.protobuf.AbstractType.Type)
+    }
+
+    private int bitField0_;
+    public static final int TYPE_FIELD_NUMBER = 1;
+    private int type_;
+    /**
+     * <code>required .com.shengsiyuan.protobuf.AbstractType.Type type = 1;</code>
+     */
+    public boolean hasType() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>required .com.shengsiyuan.protobuf.AbstractType.Type type = 1;</code>
+     */
+    public com.shengsiyuan.netty.sixexample.MyDataInfo.AbstractType.Type getType() {
+      com.shengsiyuan.netty.sixexample.MyDataInfo.AbstractType.Type result = com.shengsiyuan.netty.sixexample.MyDataInfo.AbstractType.Type.valueOf(type_);
+      return result == null ? com.shengsiyuan.netty.sixexample.MyDataInfo.AbstractType.Type.Person : result;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      if (!hasType()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!extensionsAreInitialized()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      com.google.protobuf.GeneratedMessageV3
+        .ExtendableMessage<com.shengsiyuan.netty.sixexample.MyDataInfo.AbstractType>.ExtensionWriter
+          extensionWriter = newExtensionWriter();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeEnum(1, type_);
+      }
+      extensionWriter.writeUntil(151, output);
+      unknownFields.writeTo(output);
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(1, type_);
+      }
+      size += extensionsSerializedSize();
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.shengsiyuan.netty.sixexample.MyDataInfo.AbstractType)) {
+        return super.equals(obj);
+      }
+      com.shengsiyuan.netty.sixexample.MyDataInfo.AbstractType other = (com.shengsiyuan.netty.sixexample.MyDataInfo.AbstractType) obj;
+
+      boolean result = true;
+      result = result && (hasType() == other.hasType());
+      if (hasType()) {
+        result = result && type_ == other.type_;
+      }
+      result = result && unknownFields.equals(other.unknownFields);
+      result = result &&
+          getExtensionFields().equals(other.getExtensionFields());
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasType()) {
+        hash = (37 * hash) + TYPE_FIELD_NUMBER;
+        hash = (53 * hash) + type_;
+      }
+      hash = hashFields(hash, getExtensionFields());
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.shengsiyuan.netty.sixexample.MyDataInfo.AbstractType parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shengsiyuan.netty.sixexample.MyDataInfo.AbstractType parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shengsiyuan.netty.sixexample.MyDataInfo.AbstractType parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shengsiyuan.netty.sixexample.MyDataInfo.AbstractType parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shengsiyuan.netty.sixexample.MyDataInfo.AbstractType parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shengsiyuan.netty.sixexample.MyDataInfo.AbstractType parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shengsiyuan.netty.sixexample.MyDataInfo.AbstractType parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.shengsiyuan.netty.sixexample.MyDataInfo.AbstractType parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.shengsiyuan.netty.sixexample.MyDataInfo.AbstractType parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.shengsiyuan.netty.sixexample.MyDataInfo.AbstractType parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.shengsiyuan.netty.sixexample.MyDataInfo.AbstractType parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.shengsiyuan.netty.sixexample.MyDataInfo.AbstractType parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.shengsiyuan.netty.sixexample.MyDataInfo.AbstractType prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code com.shengsiyuan.protobuf.AbstractType}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.ExtendableBuilder<
+          com.shengsiyuan.netty.sixexample.MyDataInfo.AbstractType, Builder> implements
+        // @@protoc_insertion_point(builder_implements:com.shengsiyuan.protobuf.AbstractType)
+        com.shengsiyuan.netty.sixexample.MyDataInfo.AbstractTypeOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.shengsiyuan.netty.sixexample.MyDataInfo.internal_static_com_shengsiyuan_protobuf_AbstractType_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.shengsiyuan.netty.sixexample.MyDataInfo.internal_static_com_shengsiyuan_protobuf_AbstractType_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.shengsiyuan.netty.sixexample.MyDataInfo.AbstractType.class, com.shengsiyuan.netty.sixexample.MyDataInfo.AbstractType.Builder.class);
+      }
+
+      // Construct using com.shengsiyuan.netty.sixexample.MyDataInfo.AbstractType.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        type_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.shengsiyuan.netty.sixexample.MyDataInfo.internal_static_com_shengsiyuan_protobuf_AbstractType_descriptor;
+      }
+
+      public com.shengsiyuan.netty.sixexample.MyDataInfo.AbstractType getDefaultInstanceForType() {
+        return com.shengsiyuan.netty.sixexample.MyDataInfo.AbstractType.getDefaultInstance();
+      }
+
+      public com.shengsiyuan.netty.sixexample.MyDataInfo.AbstractType build() {
+        com.shengsiyuan.netty.sixexample.MyDataInfo.AbstractType result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.shengsiyuan.netty.sixexample.MyDataInfo.AbstractType buildPartial() {
+        com.shengsiyuan.netty.sixexample.MyDataInfo.AbstractType result = new com.shengsiyuan.netty.sixexample.MyDataInfo.AbstractType(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.type_ = type_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      public <Type> Builder setExtension(
+          com.google.protobuf.GeneratedMessage.GeneratedExtension<
+              com.shengsiyuan.netty.sixexample.MyDataInfo.AbstractType, Type> extension,
+          Type value) {
+        return (Builder) super.setExtension(extension, value);
+      }
+      public <Type> Builder setExtension(
+          com.google.protobuf.GeneratedMessage.GeneratedExtension<
+              com.shengsiyuan.netty.sixexample.MyDataInfo.AbstractType, java.util.List<Type>> extension,
+          int index, Type value) {
+        return (Builder) super.setExtension(extension, index, value);
+      }
+      public <Type> Builder addExtension(
+          com.google.protobuf.GeneratedMessage.GeneratedExtension<
+              com.shengsiyuan.netty.sixexample.MyDataInfo.AbstractType, java.util.List<Type>> extension,
+          Type value) {
+        return (Builder) super.addExtension(extension, value);
+      }
+      public <Type> Builder clearExtension(
+          com.google.protobuf.GeneratedMessage.GeneratedExtension<
+              com.shengsiyuan.netty.sixexample.MyDataInfo.AbstractType, ?> extension) {
+        return (Builder) super.clearExtension(extension);
+      }
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.shengsiyuan.netty.sixexample.MyDataInfo.AbstractType) {
+          return mergeFrom((com.shengsiyuan.netty.sixexample.MyDataInfo.AbstractType)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.shengsiyuan.netty.sixexample.MyDataInfo.AbstractType other) {
+        if (other == com.shengsiyuan.netty.sixexample.MyDataInfo.AbstractType.getDefaultInstance()) return this;
+        if (other.hasType()) {
+          setType(other.getType());
+        }
+        this.mergeExtensionFields(other);
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        if (!hasType()) {
+          return false;
+        }
+        if (!extensionsAreInitialized()) {
+          return false;
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.shengsiyuan.netty.sixexample.MyDataInfo.AbstractType parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.shengsiyuan.netty.sixexample.MyDataInfo.AbstractType) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private int type_ = 0;
+      /**
+       * <code>required .com.shengsiyuan.protobuf.AbstractType.Type type = 1;</code>
+       */
+      public boolean hasType() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>required .com.shengsiyuan.protobuf.AbstractType.Type type = 1;</code>
+       */
+      public com.shengsiyuan.netty.sixexample.MyDataInfo.AbstractType.Type getType() {
+        com.shengsiyuan.netty.sixexample.MyDataInfo.AbstractType.Type result = com.shengsiyuan.netty.sixexample.MyDataInfo.AbstractType.Type.valueOf(type_);
+        return result == null ? com.shengsiyuan.netty.sixexample.MyDataInfo.AbstractType.Type.Person : result;
+      }
+      /**
+       * <code>required .com.shengsiyuan.protobuf.AbstractType.Type type = 1;</code>
+       */
+      public Builder setType(com.shengsiyuan.netty.sixexample.MyDataInfo.AbstractType.Type value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000001;
+        type_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required .com.shengsiyuan.protobuf.AbstractType.Type type = 1;</code>
+       */
+      public Builder clearType() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        type_ = 0;
+        onChanged();
+        return this;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:com.shengsiyuan.protobuf.AbstractType)
+    }
+
+    // @@protoc_insertion_point(class_scope:com.shengsiyuan.protobuf.AbstractType)
+    private static final com.shengsiyuan.netty.sixexample.MyDataInfo.AbstractType DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.shengsiyuan.netty.sixexample.MyDataInfo.AbstractType();
+    }
+
+    public static com.shengsiyuan.netty.sixexample.MyDataInfo.AbstractType getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<AbstractType>
+        PARSER = new com.google.protobuf.AbstractParser<AbstractType>() {
+      public AbstractType parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new AbstractType(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<AbstractType> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<AbstractType> getParserForType() {
+      return PARSER;
+    }
+
+    public com.shengsiyuan.netty.sixexample.MyDataInfo.AbstractType getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface PersonOrBuilder extends
       // @@protoc_insertion_point(interface_extends:com.shengsiyuan.protobuf.Person)
       com.google.protobuf.MessageOrBuilder {
@@ -829,13 +1460,866 @@ public final class MyDataInfo {
       return DEFAULT_INSTANCE;
     }
 
+    public static final int REQUEST_FIELD_NUMBER = 100;
+    /**
+     * <code>extend .com.shengsiyuan.protobuf.AbstractType { ... }</code>
+     */
+    public static final
+      com.google.protobuf.GeneratedMessage.GeneratedExtension<
+        com.shengsiyuan.netty.sixexample.MyDataInfo.AbstractType,
+        com.shengsiyuan.netty.sixexample.MyDataInfo.Person> request = com.google.protobuf.GeneratedMessage
+            .newMessageScopedGeneratedExtension(
+          com.shengsiyuan.netty.sixexample.MyDataInfo.Person.getDefaultInstance(),
+          0,
+          com.shengsiyuan.netty.sixexample.MyDataInfo.Person.class,
+          com.shengsiyuan.netty.sixexample.MyDataInfo.Person.getDefaultInstance());
   }
 
+  public interface PeopleOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:com.shengsiyuan.protobuf.People)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>required string name = 1;</code>
+     */
+    boolean hasName();
+    /**
+     * <code>required string name = 1;</code>
+     */
+    java.lang.String getName();
+    /**
+     * <code>required string name = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <code>optional int32 age = 2;</code>
+     */
+    boolean hasAge();
+    /**
+     * <code>optional int32 age = 2;</code>
+     */
+    int getAge();
+
+    /**
+     * <code>optional string address = 3;</code>
+     */
+    boolean hasAddress();
+    /**
+     * <code>optional string address = 3;</code>
+     */
+    java.lang.String getAddress();
+    /**
+     * <code>optional string address = 3;</code>
+     */
+    com.google.protobuf.ByteString
+        getAddressBytes();
+  }
+  /**
+   * Protobuf type {@code com.shengsiyuan.protobuf.People}
+   */
+  public  static final class People extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:com.shengsiyuan.protobuf.People)
+      PeopleOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use People.newBuilder() to construct.
+    private People(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private People() {
+      name_ = "";
+      age_ = 0;
+      address_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private People(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000001;
+              name_ = bs;
+              break;
+            }
+            case 16: {
+              bitField0_ |= 0x00000002;
+              age_ = input.readInt32();
+              break;
+            }
+            case 26: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000004;
+              address_ = bs;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.shengsiyuan.netty.sixexample.MyDataInfo.internal_static_com_shengsiyuan_protobuf_People_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.shengsiyuan.netty.sixexample.MyDataInfo.internal_static_com_shengsiyuan_protobuf_People_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.shengsiyuan.netty.sixexample.MyDataInfo.People.class, com.shengsiyuan.netty.sixexample.MyDataInfo.People.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int NAME_FIELD_NUMBER = 1;
+    private volatile java.lang.Object name_;
+    /**
+     * <code>required string name = 1;</code>
+     */
+    public boolean hasName() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>required string name = 1;</code>
+     */
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          name_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>required string name = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int AGE_FIELD_NUMBER = 2;
+    private int age_;
+    /**
+     * <code>optional int32 age = 2;</code>
+     */
+    public boolean hasAge() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>optional int32 age = 2;</code>
+     */
+    public int getAge() {
+      return age_;
+    }
+
+    public static final int ADDRESS_FIELD_NUMBER = 3;
+    private volatile java.lang.Object address_;
+    /**
+     * <code>optional string address = 3;</code>
+     */
+    public boolean hasAddress() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+    /**
+     * <code>optional string address = 3;</code>
+     */
+    public java.lang.String getAddress() {
+      java.lang.Object ref = address_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          address_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string address = 3;</code>
+     */
+    public com.google.protobuf.ByteString
+        getAddressBytes() {
+      java.lang.Object ref = address_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        address_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      if (!hasName()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeInt32(2, age_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, address_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(2, age_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, address_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.shengsiyuan.netty.sixexample.MyDataInfo.People)) {
+        return super.equals(obj);
+      }
+      com.shengsiyuan.netty.sixexample.MyDataInfo.People other = (com.shengsiyuan.netty.sixexample.MyDataInfo.People) obj;
+
+      boolean result = true;
+      result = result && (hasName() == other.hasName());
+      if (hasName()) {
+        result = result && getName()
+            .equals(other.getName());
+      }
+      result = result && (hasAge() == other.hasAge());
+      if (hasAge()) {
+        result = result && (getAge()
+            == other.getAge());
+      }
+      result = result && (hasAddress() == other.hasAddress());
+      if (hasAddress()) {
+        result = result && getAddress()
+            .equals(other.getAddress());
+      }
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasName()) {
+        hash = (37 * hash) + NAME_FIELD_NUMBER;
+        hash = (53 * hash) + getName().hashCode();
+      }
+      if (hasAge()) {
+        hash = (37 * hash) + AGE_FIELD_NUMBER;
+        hash = (53 * hash) + getAge();
+      }
+      if (hasAddress()) {
+        hash = (37 * hash) + ADDRESS_FIELD_NUMBER;
+        hash = (53 * hash) + getAddress().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.shengsiyuan.netty.sixexample.MyDataInfo.People parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shengsiyuan.netty.sixexample.MyDataInfo.People parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shengsiyuan.netty.sixexample.MyDataInfo.People parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shengsiyuan.netty.sixexample.MyDataInfo.People parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shengsiyuan.netty.sixexample.MyDataInfo.People parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.shengsiyuan.netty.sixexample.MyDataInfo.People parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.shengsiyuan.netty.sixexample.MyDataInfo.People parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.shengsiyuan.netty.sixexample.MyDataInfo.People parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.shengsiyuan.netty.sixexample.MyDataInfo.People parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.shengsiyuan.netty.sixexample.MyDataInfo.People parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.shengsiyuan.netty.sixexample.MyDataInfo.People parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.shengsiyuan.netty.sixexample.MyDataInfo.People parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.shengsiyuan.netty.sixexample.MyDataInfo.People prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code com.shengsiyuan.protobuf.People}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:com.shengsiyuan.protobuf.People)
+        com.shengsiyuan.netty.sixexample.MyDataInfo.PeopleOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.shengsiyuan.netty.sixexample.MyDataInfo.internal_static_com_shengsiyuan_protobuf_People_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.shengsiyuan.netty.sixexample.MyDataInfo.internal_static_com_shengsiyuan_protobuf_People_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.shengsiyuan.netty.sixexample.MyDataInfo.People.class, com.shengsiyuan.netty.sixexample.MyDataInfo.People.Builder.class);
+      }
+
+      // Construct using com.shengsiyuan.netty.sixexample.MyDataInfo.People.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        name_ = "";
+        bitField0_ = (bitField0_ & ~0x00000001);
+        age_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        address_ = "";
+        bitField0_ = (bitField0_ & ~0x00000004);
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.shengsiyuan.netty.sixexample.MyDataInfo.internal_static_com_shengsiyuan_protobuf_People_descriptor;
+      }
+
+      public com.shengsiyuan.netty.sixexample.MyDataInfo.People getDefaultInstanceForType() {
+        return com.shengsiyuan.netty.sixexample.MyDataInfo.People.getDefaultInstance();
+      }
+
+      public com.shengsiyuan.netty.sixexample.MyDataInfo.People build() {
+        com.shengsiyuan.netty.sixexample.MyDataInfo.People result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.shengsiyuan.netty.sixexample.MyDataInfo.People buildPartial() {
+        com.shengsiyuan.netty.sixexample.MyDataInfo.People result = new com.shengsiyuan.netty.sixexample.MyDataInfo.People(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.name_ = name_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.age_ = age_;
+        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.address_ = address_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.shengsiyuan.netty.sixexample.MyDataInfo.People) {
+          return mergeFrom((com.shengsiyuan.netty.sixexample.MyDataInfo.People)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.shengsiyuan.netty.sixexample.MyDataInfo.People other) {
+        if (other == com.shengsiyuan.netty.sixexample.MyDataInfo.People.getDefaultInstance()) return this;
+        if (other.hasName()) {
+          bitField0_ |= 0x00000001;
+          name_ = other.name_;
+          onChanged();
+        }
+        if (other.hasAge()) {
+          setAge(other.getAge());
+        }
+        if (other.hasAddress()) {
+          bitField0_ |= 0x00000004;
+          address_ = other.address_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        if (!hasName()) {
+          return false;
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.shengsiyuan.netty.sixexample.MyDataInfo.People parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.shengsiyuan.netty.sixexample.MyDataInfo.People) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object name_ = "";
+      /**
+       * <code>required string name = 1;</code>
+       */
+      public boolean hasName() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>required string name = 1;</code>
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            name_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>required string name = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string name = 1;</code>
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        name_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string name = 1;</code>
+       */
+      public Builder clearName() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        name_ = getDefaultInstance().getName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string name = 1;</code>
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        name_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int age_ ;
+      /**
+       * <code>optional int32 age = 2;</code>
+       */
+      public boolean hasAge() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>optional int32 age = 2;</code>
+       */
+      public int getAge() {
+        return age_;
+      }
+      /**
+       * <code>optional int32 age = 2;</code>
+       */
+      public Builder setAge(int value) {
+        bitField0_ |= 0x00000002;
+        age_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 age = 2;</code>
+       */
+      public Builder clearAge() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        age_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object address_ = "";
+      /**
+       * <code>optional string address = 3;</code>
+       */
+      public boolean hasAddress() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>optional string address = 3;</code>
+       */
+      public java.lang.String getAddress() {
+        java.lang.Object ref = address_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            address_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string address = 3;</code>
+       */
+      public com.google.protobuf.ByteString
+          getAddressBytes() {
+        java.lang.Object ref = address_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          address_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string address = 3;</code>
+       */
+      public Builder setAddress(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
+        address_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string address = 3;</code>
+       */
+      public Builder clearAddress() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        address_ = getDefaultInstance().getAddress();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string address = 3;</code>
+       */
+      public Builder setAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
+        address_ = value;
+        onChanged();
+        return this;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:com.shengsiyuan.protobuf.People)
+    }
+
+    // @@protoc_insertion_point(class_scope:com.shengsiyuan.protobuf.People)
+    private static final com.shengsiyuan.netty.sixexample.MyDataInfo.People DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.shengsiyuan.netty.sixexample.MyDataInfo.People();
+    }
+
+    public static com.shengsiyuan.netty.sixexample.MyDataInfo.People getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<People>
+        PARSER = new com.google.protobuf.AbstractParser<People>() {
+      public People parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new People(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<People> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<People> getParserForType() {
+      return PARSER;
+    }
+
+    public com.shengsiyuan.netty.sixexample.MyDataInfo.People getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+    public static final int REQUEST_FIELD_NUMBER = 101;
+    /**
+     * <code>extend .com.shengsiyuan.protobuf.AbstractType { ... }</code>
+     */
+    public static final
+      com.google.protobuf.GeneratedMessage.GeneratedExtension<
+        com.shengsiyuan.netty.sixexample.MyDataInfo.AbstractType,
+        com.shengsiyuan.netty.sixexample.MyDataInfo.People> request = com.google.protobuf.GeneratedMessage
+            .newMessageScopedGeneratedExtension(
+          com.shengsiyuan.netty.sixexample.MyDataInfo.People.getDefaultInstance(),
+          0,
+          com.shengsiyuan.netty.sixexample.MyDataInfo.People.class,
+          com.shengsiyuan.netty.sixexample.MyDataInfo.People.getDefaultInstance());
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_shengsiyuan_protobuf_AbstractType_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_com_shengsiyuan_protobuf_AbstractType_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_shengsiyuan_protobuf_Person_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_com_shengsiyuan_protobuf_Person_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_shengsiyuan_protobuf_People_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_com_shengsiyuan_protobuf_People_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -846,9 +2330,18 @@ public final class MyDataInfo {
   static {
     java.lang.String[] descriptorData = {
       "\n\031src/protobuf/Person.proto\022\030com.shengsi" +
-      "yuan.protobuf\"4\n\006Person\022\014\n\004name\030\001 \002(\t\022\013\n" +
-      "\003age\030\002 \001(\005\022\017\n\007address\030\003 \001(\tB0\n com.sheng" +
-      "siyuan.netty.sixexampleB\nMyDataInfoH\001"
+      "yuan.protobuf\"p\n\014AbstractType\0229\n\004type\030\001 " +
+      "\002(\0162+.com.shengsiyuan.protobuf.AbstractT" +
+      "ype.Type\"\036\n\004Type\022\n\n\006Person\020\000\022\n\n\006People\020\001" +
+      "*\005\010d\020\227\001\"\217\001\n\006Person\022\014\n\004name\030\001 \002(\t\022\013\n\003age\030" +
+      "\002 \001(\005\022\017\n\007address\030\003 \001(\t2Y\n\007request\022&.com." +
+      "shengsiyuan.protobuf.AbstractType\030d \001(\0132" +
+      " .com.shengsiyuan.protobuf.Person\"\217\001\n\006Pe" +
+      "ople\022\014\n\004name\030\001 \002(\t\022\013\n\003age\030\002 \001(\005\022\017\n\007addre" +
+      "ss\030\003 \001(\t2Y\n\007request\022&.com.shengsiyuan.pr" +
+      "otobuf.AbstractType\030e \001(\0132 .com.shengsiy" +
+      "uan.protobuf.PeopleB0\n com.shengsiyuan.n" +
+      "etty.sixexampleB\nMyDataInfoH\001"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -862,11 +2355,23 @@ public final class MyDataInfo {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
         }, assigner);
-    internal_static_com_shengsiyuan_protobuf_Person_descriptor =
+    internal_static_com_shengsiyuan_protobuf_AbstractType_descriptor =
       getDescriptor().getMessageTypes().get(0);
+    internal_static_com_shengsiyuan_protobuf_AbstractType_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_shengsiyuan_protobuf_AbstractType_descriptor,
+        new java.lang.String[] { "Type", });
+    internal_static_com_shengsiyuan_protobuf_Person_descriptor =
+      getDescriptor().getMessageTypes().get(1);
     internal_static_com_shengsiyuan_protobuf_Person_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_shengsiyuan_protobuf_Person_descriptor,
+        new java.lang.String[] { "Name", "Age", "Address", });
+    internal_static_com_shengsiyuan_protobuf_People_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_com_shengsiyuan_protobuf_People_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_shengsiyuan_protobuf_People_descriptor,
         new java.lang.String[] { "Name", "Age", "Address", });
   }
 

@@ -1,0 +1,8 @@
+16_Protobuf多协议消息支援与工程最佳实践
+netty protobuf multiple messages
+解决方案:1继承netty提供的自定义解码器(侧重netty)[可参考netty官方的netty example]
+解决方案:2使用protobuf的特性(侧重protobuf)
+
+计算机领域的2大难题:
+1缓存一致性
+2变量的命名

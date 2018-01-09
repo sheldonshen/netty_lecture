@@ -1,3 +1,14 @@
 15_Protobuf集成Netty与多协议消息传递
 
 protoc --java_out=src\main\java src\protobuf\Student.proto
+
+课后思考题目
+netty protobuf multiple messages
+
+参考链接
+http://rsdunya.com/?p=95
+http://www.indelible.org/ink/protobuf-polymorphism/
+https://xenojoshua.com/2013/08/using-protobuf-in-netty/
+
+其他资料
+https://groups.google.com/forum/#!topic/protobuf/wRDrA0lfowM

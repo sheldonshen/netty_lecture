@@ -6,7 +6,30 @@ option optimize_for = SPEED;
 option java_package = "com.shengsiyuan.netty.sixexample";
 option java_outer_classname = "MyDataInfo";
 
+message AbstractType{
+   extensions 100 to 150;
+   enum Type {
+      Person = 0;
+      People = 1;
+   }
+   required Type type = 1;
+   //required Type data_type = 1;此处命名使用_,是为了满足多语言的需要(注意)
+}
+
 message Person {
+   extend AbstractType {
+       optional Person request = 100;
+   }
+   required string name = 1;
+   optional int32  age = 2;
+   optional string address = 3;
+}
+
+
+message People {
+   extend AbstractType {
+       optional People request = 101;
+   }
    required string name = 1;
    optional int32  age = 2;
    optional string address = 3;
