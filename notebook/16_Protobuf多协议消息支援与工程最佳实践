@@ -6,3 +6,29 @@ netty protobuf multiple messages
 计算机领域的2大难题:
 1缓存一致性
 2变量的命名
+
+@GetMapping(...="/users/user/123")
+@PostMapping(...="/users/user/...")
+
+DispatcherServlet
+控制器
+
+netty是一个底层(网络传输)的框架,不提供路由的功能,需要你手动去写
+
+思考题:
+在多台机器(客户端,服务器)之间,如何利用git共享生成的Java文件(消息实体类)?
+
+git submodule:git仓库里的一个仓库
+ServerProject:
+   Protobuf-Java:submodule
+Protobuf-Java:(ProtoBuf中间项目)
+data.proto
+ClientProject:
+   Protobuf-Java:submodule
+
+git subtree:比较好
+
+git分支实践:
+develop
+test
+master
