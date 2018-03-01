@@ -1,0 +1,7 @@
+18_Apache Thrift应用详解与实例剖析
+
+Apache Thrift支持跨语言
+IDL:
+
+Thrift的数据类型
+1Thrift不支持无符号类型
