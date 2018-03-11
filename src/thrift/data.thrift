@@ -1,10 +1,10 @@
 namespace java thrift.generated
 
-typeof i16 short
-typeof i32 int
-typeof i64 long
-typeof bool boolean
-typeof string String
+typedef i16 short
+typedef i32 int
+typedef i64 long
+typedef bool boolean
+typedef string String
 
 struct Person{
   1: optional String username,

@@ -4,4 +4,5 @@ Apache Thrift支持跨语言
 IDL:
 
 Thrift的数据类型
-1Thrift不支持无符号类型
+1Thrift不支持无符号类型,因为很多编程语言不存在无符号类型,比如Java
+
