@@ -1,0 +1,6 @@
+sudo python setup.py thrift
+python setup.py thrift
+
+rpc的最主要特点
+1高效(相比http)
+2异构语言
